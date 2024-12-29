@@ -1,14 +1,11 @@
-# importowanie bibliotek
 import discord
 from discord.ext import commands
 from config import prefix, token
 
-# Zmienne
 intents = discord.Intents.all()
 nb = commands.Bot(command_prefix=prefix, intents=intents)
 nazwa = "bot" # Tutaj wpisz nazwe dla kanału
 
-# Dalszy kod
 @nb.event
 async def on_ready():
     print(f"{nb.user} Online")
