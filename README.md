@@ -20,7 +20,7 @@ Nukebot to prosty bot na Discorda, który jest moim pierwszym samodzielnie zapro
 ## Instalacja
 1. Sklonuj repozytorium:
    ```bash
-   git clone https://github.com/mrthejvp6rq/NukeBot
+   git clone https://github.com/mrthejvp6rq/NukeBot.git
    ```
 2. Przejdź do katalogu projektu:
    ```bash
